@@ -1,4 +1,5 @@
 const console = @import("./console.zig");
+const gdt = @import("cpu/gdt.zig");
 
 const ALIGN = 1 << 0;
 const MEMINFO = 1 << 1;
@@ -59,6 +60,8 @@ export fn _start() callconv(.Naked) noreturn {
 fn kmain() callconv(.C) void {
     console.initialize();
     console.puts("Hello from ZigOS!\n");
-    console.puts("OS - Written FULLY in Zig programming language");
+    console.puts("OS - Written FULLY in Zig programming language\n");
+    console.puts("Simpler than hello world os!\n");
+    gdt.initGdt();
     while (true) {}
 }
