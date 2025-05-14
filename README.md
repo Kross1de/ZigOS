@@ -1,3 +1,11 @@
 # Info
 ZigOS - Experemental operating system written in Zig programming language
-based on Zig Bare Bones from wiki.osdev
+
+# Features
+- Basic printing to screen
+
+# TODO
+- [ ] VFS
+- [ ] Better VGA driver
+- [ ] ANSI support in VGA driver
+- [ ] Make support of C or other programming language
